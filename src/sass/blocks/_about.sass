@@ -1,0 +1,48 @@
+.about
+	padding-top: 120px
+	&__wrapper
+		display: grid
+		grid-template-columns: 400px 670px
+		grid-template-rows: minmax(245px, auto) minmax(255px, auto)
+		grid-auto-rows: minmax(245px, auto)
+		column-gap: 70px
+		row-gap: 40px
+	&__photo
+		grid-row: 1/3
+		img
+			width: 100%
+	&__descr
+		padding-top: 6px
+		.divider
+			margin-top: 0
+	&__title
+		position: relative
+		+before_circle
+		padding-left: 12px
+		padding-top: 1px
+	&__text
+		font-size: 14px
+		line-height: 21px
+		margin-top: 20px
+	&__skills
+		display: grid
+		grid-template: repeat(2, minmax(115px, auto))/repeat(2, 260px)
+		grid-auto-rows: 1fr
+		column-gap: 50px
+		row-gap: 20px
+		&_item
+			display: grid
+			grid-template-columns: 40px 200px
+			column-gap: 20px
+		&_circle  // мы не можем псевдоэлементы(before_circle ) назначать на картинки (img), по этому поставили класс .circle
+			position: relative
+			padding-top: 15px //смещяем круг желтый
+			padding-left: 15px //смещяем круг желтый
+			+before_circle
+			&::before
+				top: 0
+		&_text
+			font-size: 12px
+			line-height: 18px
+			margin-top: 6px
+			
