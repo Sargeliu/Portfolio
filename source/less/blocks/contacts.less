@@ -1,0 +1,61 @@
+.contacts {
+  padding-top: 47px;
+
+  &__wrapper {
+    padding: 0 10px;
+    margin: 0 auto;
+  }
+
+  &__text {
+    margin: 0;
+    padding: 20px 0;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 700;
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, min-content);
+    row-gap: 20px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, min-content);
+    row-gap: 27px;
+  }
+
+  &__group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  &__label {
+    position: absolute;
+    display: block;
+    top: -9px;
+    left: 12px;
+    padding: 0 8px;
+    background-color: #ffffff;
+  }
+
+  &__input,
+  &__area {
+    padding: 14px 20px 13px 20px;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+  }
+}
+
+.button--contacts {
+  justify-self: center;
+
+  @media (min-width: 768px) {
+    justify-self: end;
+  }
+}

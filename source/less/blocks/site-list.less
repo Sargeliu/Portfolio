@@ -1,0 +1,36 @@
+.site-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, 1fr);
+  row-gap: 15px;
+  margin: 0;
+  padding: 140px 0 0 55px;
+  list-style-type: none;
+
+  &__item {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      top: 10px;
+      left: -35px;
+      border: 1px solid #000000;
+      border-radius: 50%;
+    }
+  }
+
+  &__link {
+    color: @font-white;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &:hover {
+      color: #000000;
+    }
+  }
+}

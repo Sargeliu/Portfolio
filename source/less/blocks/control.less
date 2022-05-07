@@ -1,0 +1,41 @@
+.control {
+  position: relative;
+  cursor: pointer;
+
+  &__mark {
+    position: absolute;
+    content: "";
+    width: 11px;
+    height: 11px;
+    top: 12px;
+    left: 70px;
+    background-image: url("../../img/svg/Input.svg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+    @media (min-width: 385px) {
+      top: 4px;
+      left: 40px;
+    }
+  }
+
+  &__label {
+    display: block;
+    padding-left: 91px;
+    text-align: left;
+
+    @media (min-width: 385px) {
+      padding-left: 61px;
+    }
+
+    a {
+      color: #2306d6;
+    }
+  }
+}
+
+.control__input[type="checkbox"]:checked + .control__mark {
+  background-image: url("../../img/svg/tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
