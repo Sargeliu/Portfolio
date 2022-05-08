@@ -19,6 +19,14 @@
       left: -35px;
       border: 1px solid #000000;
       border-radius: 50%;
+      transition: all 0.6s;
+    }
+
+    &:hover {
+      &::before {
+        background-color: #ffffff;
+        border-color: #ffffff;
+      }
     }
   }
 
@@ -28,6 +36,7 @@
     line-height: 36px;
     font-weight: 700;
     text-transform: uppercase;
+    transition: 0.6s;
 
     &:hover {
       color: #000000;
