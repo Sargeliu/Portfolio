@@ -1,0 +1,19 @@
+.socials-list {
+  display: grid;
+  grid-template-columns: repeat(3, min-content);
+  grid-template-rows: 30px;
+  justify-content: center;
+  column-gap: 20px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    justify-self: center;
+    cursor: pointer;
+  }
+
+  &__icon:hover {
+    color: @yellow;
+  }
+}

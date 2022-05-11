@@ -10,9 +10,22 @@
   background-size: cover;
   z-index: 1;
 
+  @media (min-width: @desktop-width) {
+    background-image: url("../../img/desktop/me/background.jpg");
+
+    @media (min-resolution: 2dppx) {
+        background-image: url("../../img/desktop/me/background@2x.jpg");
+      }
+  }
+
   &__wrapper {
     padding: 0 10px;
-    margin: 0 auto;
+
+    @media (min-width: @desktop-width) {
+      width: 1140px;
+      padding: 0;
+      margin: 0 auto;
+    }
   }
 
   &__header {
@@ -22,11 +35,18 @@
   &__title {
     order: 2;
     margin: 0;
+    max-width: 541px;
     padding-top: 9px;
     padding-bottom: 32px;
     font-size: 26px;
     line-height: 39px;
     font-weight: 700;
+
+    @media (min-width: @desktop-width) {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 60px;
+    }
   }
 
   &__subtitle {
@@ -54,15 +74,22 @@
   &__list {
     order: 3;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     margin: 0;
     padding: 0;
     list-style-type: none;
   }
 
+  &__item {
+    &--active {
+    background: @yellow;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+  }
+
   &__link {
     display: inline-block;
-    padding: 12px 25px;
+    padding: 12px 26px;
     font-size: 14px;
     line-height: 21px;
     font-weight: 700;

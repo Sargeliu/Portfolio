@@ -1,19 +1,47 @@
 .portfolio {
   padding-top: 47px;
 
+  @media (min-width: @desktop-width) {
+    padding-top: 120px;
+  }
+
   &__wrapper {
     padding: 0 10px;
-    margin: 0 auto;
+
+    @media (min-width: @desktop-width) {
+      width: 1140px;
+      padding: 0;
+      margin: 0 auto;
+    }
   }
 
   &__list {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     row-gap: 20px;
+    column-gap: 5px;
     margin: 0;
     padding: 20px 0 0 0 ;
     list-style-type: none;
+
+    @media (min-width: @desktop-width) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      padding-top: 60px;
+      row-gap: 5px;
+    }
+  }
+
+  &__item {
+    @media (min-width: @desktop-width) {
+      &--row {
+        grid-row: span 2;
+      }
+
+      &--column {
+        grid-column: span 2;
+      }
+    }
   }
 
   &__img {
