@@ -1,19 +1,28 @@
 .socials-list {
   display: flex;
   flex-wrap: wrap;
+  height: 30px;
   list-style-type: none;
   margin: 0;
   padding: 0;
 
   &--menu {
     position: absolute;
-    bottom: 20%;
+    bottom: 200px;
     left: 50%;
     transform: translateX(-50%);
+
+    @media (max-width: @mobile-width-only) {
+      bottom: 270px;
+    }
   }
 
   &__item:not(:last-child) {
     margin-right: 11px;
+  }
+
+  &__link {
+    display: inline-block;
   }
 
   &__icon:hover {
