@@ -1,6 +1,11 @@
 .control {
   position: relative;
   cursor: pointer;
+  padding-left: 91px;
+
+  @media (min-width: 387px) {
+    padding-left: 31px;
+  }
 
   &__mark {
     position: absolute;
@@ -13,9 +18,9 @@
     background-position: 50% 50%;
     background-repeat: no-repeat;
 
-    @media (min-width: 385px) {
+    @media (min-width: 387px) {
       top: 4px;
-      left: 40px;
+      left: 10px;
     }
 
     @media (min-width: @desktop-width) {
@@ -25,16 +30,7 @@
 
   &__label {
     display: block;
-    padding-left: 91px;
     text-align: left;
-
-    @media (min-width: 385px) {
-      padding-left: 61px;
-    }
-
-    @media (min-width: @desktop-width) {
-      padding-left: 21px;
-    }
 
     a {
       color: #2306d6;
