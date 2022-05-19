@@ -1,0 +1,24 @@
+.privacy {
+  padding: 50px 47px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+
+  &__title {
+    line-height: 24px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__list {
+    list-style-type: none;
+
+    &--ol {
+      padding: 0;
+    }
+
+    @media (max-width: @mobile-width-only) {
+      padding: 0;
+    }
+  }
+}
