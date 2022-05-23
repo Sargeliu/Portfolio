@@ -417,32 +417,49 @@
             </li>
           </ul>
           <p class="contacts__text">Или оставьте ваши данные и я сам вам напишу:</p>
-          <form class="contacts__form" action="https://echo.htmlacademy.ru/" method="post">
+          <form class="contacts__form" id="form" action="#">
             <div class="contacts__list">
               <p class="contacts__group">
                 <label class="contacts__label" for="name">Ваше имя</label>
-                <input class="contacts__input" type="text" name="name" id="name" placeholder="Иван" required>
+                <input class="contacts__input" type="text" name="name" id="name" placeholder="Иван">
               </p>
               <p class="contacts__group">
                 <label class="contacts__label" for="email">Ваша почта</label>
-                <input class="contacts__input" type="email" name="email" id="email" placeholder="" required>
+                <input class="contacts__input" type="email" name="email" id="email" placeholder="">
               </p>
               <p class="contacts__group contacts__group--column">
-                <label class="contacts__label" for="textarea">Ваше сообщение</label>
-                <textarea class="contacts__area" id="textarea" name="textarea" cols="30" rows="9" required></textarea>
+                <label class="contacts__label" for="message">Ваше сообщение</label>
+                <textarea class="contacts__message" id="message" name="message"></textarea>
               </p>
             </div>
-            <label class="control">
-              <input class="visually-hidden control__input" type="checkbox" name="agreement">
-              <span class="control__mark"></span>
-              <span class="control__label">Я согласен(а) с <a href="privacy.html" target="_blank">Политикой конфиденциальности</a></span>
-            </label>
+            <div class="checkbox">
+              <input class="checkbox__input" id="agreement" type="checkbox" name="agreement">
+              <label class="checkbox__label" for="agreement">
+                <span>Я согласен(а) с <a href="#">политикой конфиденциальности</a>
+                </span>
+              </label>
+            </div>
             <button class="button button--contacts" type="submit">Отправить сообщение</button>
           </form>
         </div>
       </div>
     </section>
+
+    <div class="overlay">
+      <div class="modal modal__mini" id="thanks">
+        <div class="modal__close">&times;</div>
+        <div class="modal__subtitle">Спасибо за вашу заявку!</div>
+        <div class="modal__descr">Наш менеджер свяжется с вами
+          в ближайшее время!</div>
+      </div>
+    </div>
+
   </main>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
+  <script src="js/menu.js"></script>
   <script src="js/script.js"></script>
 </body>
 
