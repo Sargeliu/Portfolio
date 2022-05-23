@@ -93,16 +93,26 @@
   }
 
   &__input,
-  &__area {
+  &__message {
     padding: 14px 20px 13px 20px;
     border: 1px solid #000000;
     box-sizing: border-box;
   }
 
-  &__area {
+  &__input {
+    &:focus {
+      border: 1px solid #ffa501;
+    }
+  }
+
+  &__message {
     min-height: 143px;
     resize: vertical;
     padding: 20px;
+
+    &:focus {
+      border: 1px solid #ffa501;
+    }
   }
 }
 
@@ -112,4 +122,8 @@
   @media (min-width: 768px) {
     justify-self: start;
   }
+}
+
+#form * {
+  outline: none;
 }
